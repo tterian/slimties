@@ -10,14 +10,17 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
 # Project-specific gems
-gem 'bootstrap-sass', '~> 3.3.4'
+gem 'bootstrap-sass'
 gem 'devise'
 gem 'draper'
-gem 'font-awesome-sass'
+gem 'font-awesome-rails'
 gem 'pg'
 gem 'bower-rails'
-gem 'responders', '~> 2.0'
+gem 'responders'
+gem 'friendly_id'
 gem 'instagram'
+gem 'omniauth-twitter'
+gem 'simple_form'
 
 group :development, :test do
   gem 'web-console', '~> 2.0'
