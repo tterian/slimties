@@ -11,3 +11,7 @@
 /log/*
 !/log/.keep
 /tmp
+
+
+# application secrets
+/config/application.yml
