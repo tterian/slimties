@@ -17,6 +17,7 @@ gem 'font-awesome-sass'
 gem 'pg'
 gem 'bower-rails'
 gem 'responders', '~> 2.0'
+gem 'instagram'
 
 group :development, :test do
   gem 'web-console', '~> 2.0'
