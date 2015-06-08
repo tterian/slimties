@@ -20,6 +20,7 @@ gem 'responders'
 gem 'friendly_id'
 gem 'instagram'
 gem 'omniauth-twitter'
+gem 'filepicker-rails'
 gem 'simple_form'
 
 group :development, :test do

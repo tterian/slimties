@@ -3,8 +3,10 @@
     <h2>Add a post</h2>
 
     <hr>
+
+	<%= form.filepicker_field :image, :onchange => 'onFileUpload(event)', :button_class => 'btn btn-info', :id => 'filepicker' %>
+
     <div class="col-lg-12">
-      <%= form.input :image %>
       <%= form.input :content %>
       <%= form.input :tags %>
     </div>
