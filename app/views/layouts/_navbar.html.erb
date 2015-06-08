@@ -8,11 +8,22 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">Slimties</a>
+      <% if user_signed_in? %>
+        <%= link_to "Slimties", posts_path(current_user), :class => "navbar-brand" %>
+      <% else %>
+        <%= link_to "Slimties", root_path, :class => "navbar-brand" %>
+      <% end %>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <% if user_signed_in? %>
-        <ul class="nav navbar-nav navbar-right">
+
+      <ul class="nav navbar-nav navbar-left">
+        <li>
+          <%= link_to "Add post", new_post_path(current_user) %>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
             <%= current_user.full_name %>
@@ -22,13 +33,17 @@
               <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
             </ul>
         </li>
+      </ul>
+
       <% else %>
+
         <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Sign up", new_user_registration_path %></li>   
-        <li><%= link_to "Login", new_user_session_path %></li>
+          <li><%= link_to "Sign up", new_user_registration_path %></li>   
+          <li><%= link_to "Login", new_user_session_path %></li>
+        </ul>
+
       <% end %>
 
-      </ul>
     </div>
   </div>
 </nav>

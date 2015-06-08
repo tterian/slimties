@@ -12,4 +12,10 @@ Rails.application.routes.draw do
                 omniauth_callbacks: 'omniauth_callbacks'
               }
 
+  scope '/user/:user_id' do
+    resources :posts
+  end
+
+
+
 end

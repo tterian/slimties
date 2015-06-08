@@ -16,6 +16,7 @@ class User < ActiveRecord::Base
 #  validates :email, length: { maximum: Const::MAXIMUM_EMAIL_LENGTH }
 #  validates :email, email: true # Using email_validator gem
 
+  has_many :posts, dependent: :destroy
 
   private
 
