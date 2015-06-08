@@ -1,19 +1,17 @@
-<table class="table">
-    <thead>
-        <tr>
-            <th>Content</th>
-            <th>Image</th>
-            <th>Tags</th>
-        </tr>
-    </thead>
+<div class="row">
 
-    <tbody>
-        <% @posts.each do |post| %>
-        <tr>
-            <td><%= post.image %></td>
-            <td><%= post.content %></td>
-            <td><%= post.tags %></td>
-        </tr>
-        <% end %>
-    </tbody>
-</table>
+<% @posts.each do |post| %>
+    <div class="col-lg-3">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <%= filepicker_image_tag post.image, w: 230, h: 230, fit: 'clip'%>
+                <p><%= post.content %></p>
+            </div>
+            <div class="panel-footer">
+                <p><%= post.tags %></p>
+            </div>
+        </div>
+    </div>
+<% end %>
+
+</div>
