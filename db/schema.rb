@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20150607145556) do
   create_table "posts", force: :cascade do |t|
     t.string   "image",      default: "", null: false
     t.text     "content",    default: "", null: false
-    t.string   "tags",       default: [], null: false, array: true
+    t.string   "tags",       default: "", null: false
     t.integer  "user_id",                 null: false
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
