@@ -13,7 +13,9 @@ Rails.application.routes.draw do
               }
 
   scope '/user/:user_id' do
-    resources :posts
+    resources :posts do
+      resources :comments
+    end
   end
 
 
